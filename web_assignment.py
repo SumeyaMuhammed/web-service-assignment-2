@@ -67,6 +67,161 @@ def list_movies():
         logging.error(f"Movie list error: {e}")
         return jsonify({"error": str(e)}), 500
 
+# AUTHENTICATION (JWT)
+
+
+@app.route("/auth/login", methods=["POST"])
+def login():
+    body = request.json or {}
+    username = body.get("username", "student")
+
+    token = jwt.encode(
+        {"sub": username, "exp": datetime.utcnow() + timedelta(hours=1)},
+        JWT_SECRET,
+        algorithm="HS256",
+    )
+
+    return jsonify({"token": token})
+
+
+def jwt_required(f):
+    def wrapper(*args, **kwargs):
+        auth = request.headers.get("Authorization", "")
+        if not auth.startswith("Bearer "):
+            return jsonify({"error": "Missing token"}), 401
+
+        token = auth.split()[1]
+
+        try:
+            decoded = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+            request.user = decoded["sub"]
+        except Exception:
+            return jsonify({"error": "Invalid or expired token"}), 401
+
+        return f(*args, **kwargs)
+
+    wrapper.name = f.name
+    return wrapper
+
+
+@app.route("/auth/profile")
+@jwt_required
+def profile():
+    return jsonify({
+        "status": "authorized",
+        "user": request.user
+    })
+
+
+# MOVIE DATA TRANSFORMATION
+
+@app.route("/movies/summary")
+def movie_summary():
+    try:
+        data = fetch_popular_movies()
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    movies = data["results"]
+
+    html = """
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .poster {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        .overview {
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+    </style>
+
+    <h1>Popular Movies</h1>
+
+    <div class="grid">
+        {% for movie in movies %}
+        <div class="card">
+            {% if movie.poster_path %}
+                <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" class="poster">
+            {% endif %}
+            <div class="title">{{ movie.title }}</div>
+            <div class="overview">{{ movie.overview }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    """
+
+
+    return render_template_string(html, movies=movies)
+
+
+# ----------------------------------------------------------------------
+# MOVIE LISTING (SHOW VALID IDs)
+# ----------------------------------------------------------------------
+
+@app.route("/movies/list")
+def list_movies():
+    """Return a list of popular movies with their IDs so users know what ID to use."""
+    try:
+        data = fetch_popular_movies()
+        movies = [
+            {"id": movie["id"], "title": movie["title"]}
+            for movie in data.get("results", [])
+        ]
+        return jsonify({"available_movies": movies})
+    except Exception as e:
+        logging.error(f"Movie list error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+        
+# ERROR HANDLING DEMO (DYNAMIC INVALID ID)
+
+import random
+
+@app.route("/movie/error-test")
+def trigger_error():
+    """Trigger an API error by intentionally using a definitely invalid movie ID."""
+    bad_id = random.randint(10_000_000, 90_000_000)  # guaranteed invalid
+
+    try:
+        fetch_movie(bad_id)
+        return jsonify({"message": "Unexpected success"})
+
+    except requests.exceptions.HTTPError as e:
+        logging.error(f"HTTP ERROR: {e}")
+        return jsonify({"error": "HTTP error occurred", "invalid_id": bad_id}), 502
+
+    except Exception as e:
+        logging.error(f"GENERAL ERROR: {e}")
+        return jsonify({"error": "Unknown error", "invalid_id": bad_id}), 500
+        
 if __name__ == "__main__":
     print("Starting Flask Application on port 5050")
     app.run(debug=True, port=5050)(debug=True, port=5050)
