@@ -201,6 +201,27 @@ def list_movies():
         return jsonify({"error": str(e)}), 500
 
         
+# ERROR HANDLING DEMO (DYNAMIC INVALID ID)
+
+import random
+
+@app.route("/movie/error-test")
+def trigger_error():
+    """Trigger an API error by intentionally using a definitely invalid movie ID."""
+    bad_id = random.randint(10_000_000, 90_000_000)  # guaranteed invalid
+
+    try:
+        fetch_movie(bad_id)
+        return jsonify({"message": "Unexpected success"})
+
+    except requests.exceptions.HTTPError as e:
+        logging.error(f"HTTP ERROR: {e}")
+        return jsonify({"error": "HTTP error occurred", "invalid_id": bad_id}), 502
+
+    except Exception as e:
+        logging.error(f"GENERAL ERROR: {e}")
+        return jsonify({"error": "Unknown error", "invalid_id": bad_id}), 500
+        
 if __name__ == "__main__":
     print("Starting Flask Application on port 5050")
     app.run(debug=True, port=5050)(debug=True, port=5050)
