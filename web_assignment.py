@@ -67,6 +67,51 @@ def list_movies():
         logging.error(f"Movie list error: {e}")
         return jsonify({"error": str(e)}), 500
 
+# AUTHENTICATION (JWT)
+
+
+@app.route("/auth/login", methods=["POST"])
+def login():
+    body = request.json or {}
+    username = body.get("username", "student")
+
+    token = jwt.encode(
+        {"sub": username, "exp": datetime.utcnow() + timedelta(hours=1)},
+        JWT_SECRET,
+        algorithm="HS256",
+    )
+
+    return jsonify({"token": token})
+
+
+def jwt_required(f):
+    def wrapper(*args, **kwargs):
+        auth = request.headers.get("Authorization", "")
+        if not auth.startswith("Bearer "):
+            return jsonify({"error": "Missing token"}), 401
+
+        token = auth.split()[1]
+
+        try:
+            decoded = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+            request.user = decoded["sub"]
+        except Exception:
+            return jsonify({"error": "Invalid or expired token"}), 401
+
+        return f(*args, **kwargs)
+
+    wrapper.name = f.name
+    return wrapper
+
+
+@app.route("/auth/profile")
+@jwt_required
+def profile():
+    return jsonify({
+        "status": "authorized",
+        "user": request.user
+    })
+
 if __name__ == "__main__":
     print("Starting Flask Application on port 5050")
     app.run(debug=True, port=5050)(debug=True, port=5050)
