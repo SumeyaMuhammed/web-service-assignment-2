@@ -1,0 +1,148 @@
+2025-12-01 18:10:52,880 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-12-01 18:10:52,881 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-01 18:10:52,894 [INFO]  * Restarting with stat
+2025-12-01 18:10:54,473 [WARNING]  * Debugger is active!
+2025-12-01 18:10:54,505 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:11:00,370 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:00] "[35m[1mGET /movies/summary HTTP/1.1[0m" 500 -
+2025-12-01 18:11:01,074 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:01] "GET /movies/summary?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-12-01 18:11:01,094 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:01] "GET /movies/summary?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-12-01 18:11:01,183 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:01] "GET /movies/summary?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-12-01 18:11:01,199 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:01] "[36mGET /movies/summary?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-01 18:11:10,284 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:11:10,498 [INFO]  * Restarting with stat
+2025-12-01 18:11:12,624 [WARNING]  * Debugger is active!
+2025-12-01 18:11:12,671 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:11:21,311 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-12-01 18:11:21,312 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-01 18:11:21,313 [INFO]  * Restarting with stat
+2025-12-01 18:11:22,328 [WARNING]  * Debugger is active!
+2025-12-01 18:11:22,359 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:11:25,839 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:25] "[35m[1mGET /movies/summary HTTP/1.1[0m" 500 -
+2025-12-01 18:11:26,286 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:26] "[36mGET /movies/summary?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-01 18:11:26,304 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:26] "[36mGET /movies/summary?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-01 18:11:26,326 [INFO] 127.0.0.1 - - [01/Dec/2025 18:11:26] "[36mGET /movies/summary?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-01 18:11:33,185 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:11:33,256 [INFO]  * Restarting with stat
+2025-12-01 18:11:34,737 [WARNING]  * Debugger is active!
+2025-12-01 18:11:34,777 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:12:48,776 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:12:48,931 [INFO]  * Restarting with stat
+2025-12-01 18:12:51,181 [WARNING]  * Debugger is active!
+2025-12-01 18:12:51,217 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:13:27,443 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:13:27,606 [INFO]  * Restarting with stat
+2025-12-01 18:14:08,138 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-12-01 18:14:08,139 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-01 18:14:08,150 [INFO]  * Restarting with stat
+2025-12-01 18:14:09,592 [WARNING]  * Debugger is active!
+2025-12-01 18:14:09,605 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:14:13,847 [INFO] 127.0.0.1 - - [01/Dec/2025 18:14:13] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:14:34,640 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:14:34,724 [INFO]  * Restarting with stat
+2025-12-01 18:14:36,067 [WARNING]  * Debugger is active!
+2025-12-01 18:14:36,087 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:14:39,043 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:14:39,188 [INFO]  * Restarting with stat
+2025-12-01 18:14:41,066 [WARNING]  * Debugger is active!
+2025-12-01 18:14:41,089 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:14:48,425 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:14:48,671 [INFO]  * Restarting with stat
+2025-12-01 18:14:50,702 [WARNING]  * Debugger is active!
+2025-12-01 18:14:50,722 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:14:56,654 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:14:56,717 [INFO]  * Restarting with stat
+2025-12-01 18:14:58,143 [WARNING]  * Debugger is active!
+2025-12-01 18:14:58,167 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:15:16,360 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:15:16,476 [INFO]  * Restarting with stat
+2025-12-01 18:15:17,852 [WARNING]  * Debugger is active!
+2025-12-01 18:15:17,887 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:15:21,005 [INFO] 127.0.0.1 - - [01/Dec/2025 18:15:21] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:15:33,595 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:15:33,649 [INFO]  * Restarting with stat
+2025-12-01 18:15:34,538 [WARNING]  * Debugger is active!
+2025-12-01 18:15:34,557 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:15:40,402 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:15:40,463 [INFO]  * Restarting with stat
+2025-12-01 18:15:41,597 [WARNING]  * Debugger is active!
+2025-12-01 18:15:41,623 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:15:45,866 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:15:45,932 [INFO]  * Restarting with stat
+2025-12-01 18:15:47,392 [WARNING]  * Debugger is active!
+2025-12-01 18:15:47,419 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:15:51,775 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:15:51,836 [INFO]  * Restarting with stat
+2025-12-01 18:15:53,155 [WARNING]  * Debugger is active!
+2025-12-01 18:15:53,174 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:15:57,727 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:15:57,809 [INFO]  * Restarting with stat
+2025-12-01 18:15:59,315 [WARNING]  * Debugger is active!
+2025-12-01 18:15:59,360 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:16:06,090 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:16:06,192 [INFO]  * Restarting with stat
+2025-12-01 18:16:07,984 [WARNING]  * Debugger is active!
+2025-12-01 18:16:08,002 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:16:10,583 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:16:10,681 [INFO]  * Restarting with stat
+2025-12-01 18:16:12,450 [WARNING]  * Debugger is active!
+2025-12-01 18:16:12,473 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:16:14,378 [INFO] 127.0.0.1 - - [01/Dec/2025 18:16:14] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:16:35,867 [INFO] 127.0.0.1 - - [01/Dec/2025 18:16:35] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:16:42,305 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:16:42,414 [INFO]  * Restarting with stat
+2025-12-01 18:16:44,094 [WARNING]  * Debugger is active!
+2025-12-01 18:16:44,116 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:16:46,030 [INFO] 127.0.0.1 - - [01/Dec/2025 18:16:46] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:18:35,797 [INFO] Movie fetch SUCCESS: Movie 268
+2025-12-01 18:18:35,797 [INFO] 127.0.0.1 - - [01/Dec/2025 18:18:35] "GET /movie?id=268 HTTP/1.1" 200 -
+2025-12-01 18:18:35,901 [INFO] 127.0.0.1 - - [01/Dec/2025 18:18:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-01 18:20:33,969 [INFO] 127.0.0.1 - - [01/Dec/2025 18:20:33] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:21:07,233 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:21:07,424 [INFO]  * Restarting with stat
+2025-12-01 18:21:10,100 [WARNING]  * Debugger is active!
+2025-12-01 18:21:10,131 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:21:13,770 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:21:13,857 [INFO]  * Restarting with stat
+2025-12-01 18:21:15,773 [WARNING]  * Debugger is active!
+2025-12-01 18:21:15,814 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:21:27,146 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:21:27,282 [INFO]  * Restarting with stat
+2025-12-01 18:21:50,232 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-12-01 18:21:50,232 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-01 18:21:50,240 [INFO]  * Restarting with stat
+2025-12-01 18:21:51,565 [WARNING]  * Debugger is active!
+2025-12-01 18:21:51,586 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:21:54,481 [INFO] 127.0.0.1 - - [01/Dec/2025 18:21:54] "[33mGET /movies/summary HTTP/1.1[0m" 404 -
+2025-12-01 18:21:54,577 [INFO] 127.0.0.1 - - [01/Dec/2025 18:21:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-01 18:23:08,244 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:23:08,375 [INFO]  * Restarting with stat
+2025-12-01 18:23:10,207 [WARNING]  * Debugger is active!
+2025-12-01 18:23:10,230 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:23:14,507 [INFO] 127.0.0.1 - - [01/Dec/2025 18:23:14] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:27:00,746 [INFO] Movie fetch SUCCESS: Movie 550
+2025-12-01 18:27:00,751 [INFO] 127.0.0.1 - - [01/Dec/2025 18:27:00] "GET /movie?id=550 HTTP/1.1" 200 -
+2025-12-01 18:29:20,410 [INFO] 127.0.0.1 - - [01/Dec/2025 18:29:20] "GET /movies/summary HTTP/1.1" 200 -
+2025-12-01 18:29:23,402 [INFO] 127.0.0.1 - - [01/Dec/2025 18:29:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-01 18:30:39,800 [ERROR] HTTP ERROR: 404 Client Error: Not Found for url: https://api.themoviedb.org/3/movie/27046702?api_key=4e07e478a17e88be7f8679d5dc7cdfd8
+2025-12-01 18:30:39,801 [INFO] 127.0.0.1 - - [01/Dec/2025 18:30:39] "[35m[1mGET /movie/error-test HTTP/1.1[0m" 502 -
+2025-12-01 18:31:02,420 [INFO] 127.0.0.1 - - [01/Dec/2025 18:31:02] "[31m[1mGET /auth/profile HTTP/1.1[0m" 401 -
+2025-12-01 18:36:28,840 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:36:29,123 [INFO]  * Restarting with stat
+2025-12-01 18:36:33,951 [WARNING]  * Debugger is active!
+2025-12-01 18:36:34,001 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:37:57,537 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\web_assignment.py', reloading
+2025-12-01 18:37:57,612 [INFO]  * Restarting with stat
+2025-12-01 18:37:58,958 [WARNING]  * Debugger is active!
+2025-12-01 18:37:58,977 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:39:17,368 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:39:17,426 [INFO]  * Restarting with stat
+2025-12-01 18:39:18,535 [WARNING]  * Debugger is active!
+2025-12-01 18:39:18,558 [INFO]  * Debugger PIN: 897-016-842
+2025-12-01 18:39:20,089 [INFO]  * Detected change in 'C:\\Users\\hp\\OneDrive\\Desktop\\General\\web-service-assignment-2\\assignment2.py', reloading
+2025-12-01 18:39:20,168 [INFO]  * Restarting with stat
+2025-12-01 18:39:22,816 [WARNING]  * Debugger is active!
+2025-12-01 18:39:22,827 [INFO]  * Debugger PIN: 897-016-842
