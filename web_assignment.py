@@ -112,6 +112,95 @@ def profile():
         "user": request.user
     })
 
+
+# MOVIE DATA TRANSFORMATION
+
+@app.route("/movies/summary")
+def movie_summary():
+    try:
+        data = fetch_popular_movies()
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    movies = data["results"]
+
+    html = """
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .poster {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        .overview {
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+    </style>
+
+    <h1>Popular Movies</h1>
+
+    <div class="grid">
+        {% for movie in movies %}
+        <div class="card">
+            {% if movie.poster_path %}
+                <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" class="poster">
+            {% endif %}
+            <div class="title">{{ movie.title }}</div>
+            <div class="overview">{{ movie.overview }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    """
+
+
+    return render_template_string(html, movies=movies)
+
+
+# ----------------------------------------------------------------------
+# MOVIE LISTING (SHOW VALID IDs)
+# ----------------------------------------------------------------------
+
+@app.route("/movies/list")
+def list_movies():
+    """Return a list of popular movies with their IDs so users know what ID to use."""
+    try:
+        data = fetch_popular_movies()
+        movies = [
+            {"id": movie["id"], "title": movie["title"]}
+            for movie in data.get("results", [])
+        ]
+        return jsonify({"available_movies": movies})
+    except Exception as e:
+        logging.error(f"Movie list error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+        
 if __name__ == "__main__":
     print("Starting Flask Application on port 5050")
     app.run(debug=True, port=5050)(debug=True, port=5050)
